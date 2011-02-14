@@ -9,7 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.search.you.DBException;
-import com.search.you.MYSQLConfiguration;
+import com.search.you.DBFactory;
 import com.search.you.ReadFromDB;
 import com.search.you.processor.interfaces.IProcessor;
 import com.search.you.reader.interfaces.IReader;
@@ -25,12 +25,8 @@ public class DBReader implements IReader {
 
 	@Override
 	public void init() {
-		rdb.initConnection(new MYSQLConfiguration());
-		try {
-			statement = rdb.getStatement("Select * from message");
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		rdb.initConnection(DBFactory.getConfiguration());
+		statement = rdb.getStatement("Select * from Messages");
 	}
 
 	@Override

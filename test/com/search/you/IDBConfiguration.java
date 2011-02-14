@@ -9,6 +9,7 @@ public interface IDBConfiguration {
 	public static String DBUSER = "user";
 	public static String DBDRIVER = "driver";
 	public static String DBURL = "url";
+	public static String DBNAME = "name";
 	
 	
 	public String getProperty(String key);

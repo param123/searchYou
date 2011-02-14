@@ -61,4 +61,13 @@ public class ReadFromDB {
 		System.out.println("------------------------------------------------------------------");
 	}
 
+	public PreparedStatement getStatement(String string) {
+
+		try {
+			return conn.prepareStatement(string);
+		} catch (SQLException e) {
+            throw new DBException("Error while executing command "+string, e);
+		}
+	}
+
 }
