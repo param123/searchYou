@@ -24,7 +24,7 @@ public class ReadFromDB {
 	   
 	}
 	
-	private void initConnection(IDBConfiguration dbConfiguration){
+	public void initConnection(IDBConfiguration dbConfiguration){
 		 conn = dbConfiguration.initConnection();
 	}
 	
