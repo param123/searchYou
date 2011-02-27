@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 
 public class ReadFromDB {
 		
-	private Connection conn;
+	private static Connection conn;
 	
 	static{
 		initDriver();
@@ -24,9 +24,14 @@ public class ReadFromDB {
 	   
 	}
 	
-	private void initConnection(IDBConfiguration dbConfiguration){
+	public void initConnection(IDBConfiguration dbConfiguration){
 		 conn = dbConfiguration.initConnection();
 	}
+	
+	public PreparedStatement getStatement(String query) throws SQLException{
+		return conn.prepareStatement(query);
+	}
+	
 	
 	/**
 	 * Test method
