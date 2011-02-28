@@ -12,7 +12,7 @@ public class Footer extends LayoutPanel {
 	public Footer(){
 		add(footerPanel);
 		//setWidgetLeftRight(footerPanel, 5, Unit.EM, 5, Unit.EM);     // Center panel
-		setWidgetTopBottom(footerPanel, 5, Unit.EM, 0, Unit.EM);
+		//setWidgetTopBottom(footerPanel, 5, Unit.EM, 0, Unit.EM);
 		//getStyleElement().setAttribute("border", "1 thick solid");
 	}
 	

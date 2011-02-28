@@ -9,14 +9,10 @@ public class BaseBody extends DockLayoutPanel {
 	
 	public BaseBody(Unit unit) {
 		super(unit);
-		add(new HTML("BODY"));
+		addStyleName("body-layout");
+		add(new HTML("body"));
 //		setWidgetLeftRight(footerPanel, 5, Unit.EM, 5, Unit.EM);     // Center panel
 //		setWidgetTopBottom(footerPanel, 5, Unit.EM, 5, Unit.EM);
 	}
 	
-	
-	public static BaseBody getBody(){
-		return new BaseBody(Unit.EM);
-	}
-
 }

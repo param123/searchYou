@@ -1,9 +1,11 @@
 package com.actiance.search.client;
 
+import com.actiance.search.client.layout.BasicLayout;
 import com.actiance.search.client.layout.LayoutManager;
 import com.actiance.search.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
@@ -42,7 +44,9 @@ public class SearchYou implements EntryPoint {
 	public void onModuleLoad() {
 		Window.enableScrolling(false);
 	    Window.setMargin("0px");
-		RootLayoutPanel.get().add(LayoutManager.getLayoutManager().getLayout(LayoutManager.BASE));
+	    LayoutManager.getLayoutManager().setLayout(new BasicLayout(Unit.EM));
+	    LayoutManager.getLayoutManager().paintLayout();
+	    
 	}
 
 	/**
