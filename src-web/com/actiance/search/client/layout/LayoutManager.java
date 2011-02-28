@@ -1,18 +1,14 @@
 package com.actiance.search.client.layout;
 
-import com.actiance.search.client.layout.base.BaseBody;
-import com.actiance.search.client.layout.base.Footer;
-import com.actiance.search.client.layout.base.Header;
-import com.google.gwt.dom.client.Style.Unit;
-import com.google.gwt.user.client.ui.DockLayoutPanel;
-import com.google.gwt.user.client.ui.Widget;
+import com.actiance.search.client.layout.interfaces.ILayout;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 public class LayoutManager {
 	
 	
 	private static LayoutManager LAYOUT_MANAGER = new LayoutManager();
 	public static final int BASE = 0;
-	
+	private ILayout layOut = null;
 	
 	private LayoutManager(){
 		
@@ -22,23 +18,19 @@ public class LayoutManager {
 		return LAYOUT_MANAGER;
 	}
 	
-	public Widget getLayout(int i){
-	
-		Widget layoutWidget = null;
-		
-		switch(i){
-		case BASE:
-			 DockLayoutPanel dockPanel = new DockLayoutPanel(Unit.EM);
-			 dockPanel.addNorth(Header.getHeader("Search"), 20);
-			 dockPanel.addSouth(Footer.getFooter(), 20);
-			 dockPanel.add(BaseBody.getBody());
-			 layoutWidget = dockPanel;
-			
-		}
-		
-		return layoutWidget;
+	public void setLayout(ILayout layout){
+		this.layOut = layout;
 	}
 	
+	public void paintLayout(){
+        layOut.makeLayout();
+        RootLayoutPanel.get().clear();
+        RootLayoutPanel.get().add(layOut.container());
+	}
+	
+	public ILayout getLayout(){
+		return layOut;
+	}
 	
 
 }
