@@ -1,25 +1,27 @@
 package com.actiance.search.client.layout;
 
+import com.actiance.search.client.layout.base.AbstractLayout;
 import com.actiance.search.client.layout.base.BaseBody;
 import com.actiance.search.client.layout.base.Footer;
 import com.actiance.search.client.layout.base.Header;
-import com.actiance.search.client.layout.interfaces.ILayout;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.Widget;
 
-public class BasicLayout implements ILayout {
+public class BasicLayout extends AbstractLayout {
 
 	
 	private DockLayoutPanel container = null;
 	private LayoutPanel     footer = null;
 	private LayoutPanel     header = null;
 	private Panel     body   = null;
-	public BasicLayout(Unit unit){
+	
+	public BasicLayout(Unit unit,LayoutManager manager){
+		super(manager);
 		container = new DockLayoutPanel(unit);
-	    footer = new Footer();
+	    footer = Footer.getFooter();
 	    header = new Header();
 	    body = new BaseBody(unit);
 	}
@@ -48,7 +50,7 @@ public class BasicLayout implements ILayout {
 	public void makeLayout() {
 		
 		container.addNorth(header, 6.491);
-		container.addSouth(footer, 3);
+		container.addSouth(footer, 1);
 		container.add(body);
 		
 	}
