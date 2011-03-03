@@ -12,6 +12,7 @@ public class Footer extends LayoutPanel {
 	private Footer(){
 		HTML footerPanel = new HTML(SearchConstants.strConstants.copyright());
 		footerPanel.setAutoHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+		footerPanel.setStyleName("footer");
 		add(footerPanel);
 	}
 	

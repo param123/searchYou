@@ -49,8 +49,8 @@ public class BasicLayout extends AbstractLayout {
 	@Override
 	public void makeLayout() {
 		
-		container.addNorth(header, 6.491);
-		container.addSouth(footer, 1);
+		container.addNorth(header, 4.5);
+		container.addSouth(footer, 1.5);
 		container.add(body);
 		
 	}

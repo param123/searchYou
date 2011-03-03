@@ -9,5 +9,14 @@ public interface StringConstants extends Constants {
 	
 	@DefaultStringValue("&copy; copy right")
 	String copyright();
+	
+	@DefaultStringValue("Actiance")
+	String actiance();
+	
+	@DefaultStringValue("What is your question?")
+	String whatISURQuestion();
+	
+	@DefaultStringValue("How did we arrive at this result?")
+	String howDidWeArrive();
 
 }

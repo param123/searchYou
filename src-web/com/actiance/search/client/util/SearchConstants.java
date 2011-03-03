@@ -14,4 +14,16 @@ public class SearchConstants {
 		return seperator;
 	}
 	
+	public static Label getLabel(String value,String styleName){
+		Label temp = new Label(value);
+		String tmp = styleName!=null?styleName+" label-font":"label-font";
+		temp.setStyleName(tmp);
+		return temp;
+	}
+	
+	public static Label getLabel(String value){
+		return getLabel(value, null);
+	}
+	
+	
 }
