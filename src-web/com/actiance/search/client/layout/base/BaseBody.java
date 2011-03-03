@@ -8,6 +8,7 @@ import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.TextArea;
@@ -19,6 +20,7 @@ public class BaseBody extends DockLayoutPanel {
 	private TextArea searchBox = null;
 	private double searchPanelHeight = 9;
 	private HTMLPanel howDidWeArrive = new HTMLPanel(SearchConstants.strConstants.howDidWeArrive());
+	private ListBox optionList = new ListBox(false);
 	public BaseBody(Unit unit) {
 		super(unit);
 		
@@ -36,9 +38,11 @@ public class BaseBody extends DockLayoutPanel {
 		HorizontalPanel textPanel = new HorizontalPanel();
 		textPanel.setStyleName("search-box");
 		textPanel.setVerticalAlignment(HasVerticalAlignment.ALIGN_MIDDLE);
+		textPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
 		searchBox = new TextArea();
 		searchBox.setStyleName("search-text-box");
 		textPanel.add(searchBox);
+		createOptions(textPanel);
 		createButton(textPanel);
 		
 		searchPanel.add(textPanel);
@@ -49,6 +53,14 @@ public class BaseBody extends DockLayoutPanel {
 //		searchButton.setStyleName("search-button");
 //		searchButton.setSize("75px", "100%");
 //		searchPanel.add(searchButton);
+	}
+	
+	private void createOptions(Panel parent){
+		optionList.setStyleName("option-list");
+		optionList.addItem("All");
+		optionList.addItem("People");
+		optionList.addItem("Document");
+		parent.add(optionList);
 	}
 	
 	private void createButton(Panel parent){

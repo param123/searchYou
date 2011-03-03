@@ -99,7 +99,7 @@ h1 {
  .search-box{
 	//background-image: url(images/question-box.png);
    // background-repeat: no-repeat;
-    background-position: 0 0;
+   // background-position: 0 0;
     padding-left: 5px;
     padding-top: 10px;
     width: 70%;
@@ -108,13 +108,15 @@ h1 {
   .search-text-box{
     border: 2px solid #FF8000;
     //padding-top: .5px;
-     width: 97%;
+     width: 99%;
      height: 3.5em;
      overflow: hidden;
      resize:none;
  }
  
- 
+ select {
+	border: none;
+}
  
  .search-button{
 	//background-image: url(images/QuestionMark-active.png);
@@ -130,6 +132,15 @@ h1 {
   text-align: center;
   text-shadow: 0px 2px 3px #666;
 }
+
+.option-list{
+	border: 2px solid #FF8000; 
+	height: 3.5em;
+	padding-right: 2px;
+	text-align: right;
+	overflow: hidden;
+     resize:none;
+	}
 
 .question-font{
   font-size: 1.3em;
@@ -151,8 +162,8 @@ h1 {
  }
  
  .button-font{
-  font-size: 1.3em;
-  font-weight: 100;
+  font-size: 1.5em;
+  font-weight:bold;
   color: #2E2E2E;
   text-align: center;
   text-shadow: 0px 2px 3px #666;

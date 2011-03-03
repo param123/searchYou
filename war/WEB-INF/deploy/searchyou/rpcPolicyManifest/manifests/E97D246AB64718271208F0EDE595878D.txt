@@ -1,0 +1,2 @@
+serviceClass: com.actiance.search.client.GreetingService
+path: 925CAA2C215EF0DFA776E7785EE8F7E1.gwt.rpc
