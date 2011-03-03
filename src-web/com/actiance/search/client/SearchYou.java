@@ -44,9 +44,8 @@ public class SearchYou implements EntryPoint {
 	public void onModuleLoad() {
 		Window.enableScrolling(false);
 	    Window.setMargin("0px");
-	    LayoutManager.getLayoutManager().setLayout(new BasicLayout(Unit.EM));
+	    LayoutManager.getLayoutManager().setLayout(new BasicLayout(Unit.EM,LayoutManager.getLayoutManager()));
 	    LayoutManager.getLayoutManager().paintLayout();
-	    
 	}
 
 	/**
