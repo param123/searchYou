@@ -96,19 +96,20 @@ h1 {
 	width: 100%;
  }
  
+ 
  .search-box{
 	//background-image: url(images/question-box.png);
    // background-repeat: no-repeat;
    // background-position: 0 0;
     padding-left: 5px;
     padding-top: 10px;
-    width: 70%;
+    width: 100%;
  }
  
   .search-text-box{
     border: 2px solid #FF8000;
     //padding-top: .5px;
-     width: 99%;
+     width: 97%;
      height: 3.5em;
      overflow: hidden;
      resize:none;
@@ -133,14 +134,6 @@ h1 {
   text-shadow: 0px 2px 3px #666;
 }
 
-.option-list{
-	border: 2px solid #FF8000; 
-	height: 3.5em;
-	padding-right: 2px;
-	text-align: right;
-	overflow: hidden;
-     resize:none;
-	}
 
 .question-font{
   font-size: 1.3em;
@@ -149,7 +142,6 @@ h1 {
   color: #2E2E2E;
   text-align: left;
   text-shadow: 0px 2px 3px #666;
-	
 }
 
 .ask-button{
@@ -168,6 +160,26 @@ h1 {
   text-align: center;
   text-shadow: 0px 2px 3px #666;
  }
+ 
+.how-did-panel{
+	width : auto;
+	text-align: center;
+	}
+	
+.how-did{
+	background-image: url(images/line-rang.gif);
+	background-repeat:no-repeat;
+	background-position : 0 0;
+	height: 5em;
+	}
+	
+.query-font{
+  font-size: 1em;
+  font-weight: 100;
+  color: #2E2E2E;
+  text-align: left;
+  text-shadow: 0px 1px 1px #666;
+}
 
 .footer{
 	border-top:  1px solid #AEA77D;
