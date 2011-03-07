@@ -8,7 +8,6 @@ import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -18,8 +17,7 @@ public class BaseBody extends DockLayoutPanel {
 	private VerticalPanel searchPanel = new VerticalPanel();
 	private TextArea searchBox = null;
 	private double searchPanelHeight = 9;
-//	private HTMLPanel howDidWeArrive = new HTMLPanel(SearchConstants.strConstants.howDidWeArrive());
-//	private ListBox optionList = new ListBox(false);
+	private double sidePanelWidth = 15;
 	public BaseBody(Unit unit) {
 		super(unit);
 		
@@ -30,12 +28,12 @@ public class BaseBody extends DockLayoutPanel {
 		questionPanel();
 		createSearchBox();
 		addNorth(searchPanel, searchPanelHeight);
+		addEast(new SidePanel(), sidePanelWidth);
+		add(new ResultPanel());
 	}
 	
 	
 	private void createSearchBox(){
-//		HorizontalPanel parentPanel = new HorizontalPanel();
-//		parentPanel.setSize("100%", "100%");
 		HorizontalPanel textPanel = new HorizontalPanel();
 		textPanel.setStyleName("search-box");
 		textPanel.setVerticalAlignment(HasVerticalAlignment.ALIGN_MIDDLE);
@@ -45,29 +43,12 @@ public class BaseBody extends DockLayoutPanel {
 		
 		textPanel.add(searchBox);
 		textPanel.setCellWidth(searchBox, "50%");
-//		createOptions(textPanel);
 		createButton(textPanel,"20%");
-//		HorizontalPanel howDidPanel = new HorizontalPanel();
 		howDidWeArrive(textPanel,"30%");
-//		parentPanel.add(textPanel);
-//		parentPanel.add(howDidPanel);
 		searchPanel.add(textPanel);
 		
-		
-		
-//		SimplePanel searchButton = new SimplePanel();
-//		searchButton.setStyleName("search-button");
-//		searchButton.setSize("75px", "100%");
-//		searchPanel.add(searchButton);
 	}
 	
-//	private void createOptions(Panel parent){
-//		optionList.setStyleName("option-list");
-//		optionList.addItem("All");
-//		optionList.addItem("People");
-//		optionList.addItem("Document");
-//		parent.add(optionList);
-//	}
 	
 	private Button createButton(CellPanel parent,String width){
 		Button askButton = new Button("Ask Now");
@@ -90,11 +71,5 @@ public class BaseBody extends DockLayoutPanel {
 		panel.add(SearchConstants.getLabel(SearchConstants.strConstants.whatISURQuestion(), "question-font "));
 		searchPanel.add(panel);
 	}
-	
-	
-	
-//	private void createSearchButton(){
-//		
-//	}
 	
 }
