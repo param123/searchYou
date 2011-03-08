@@ -17,7 +17,7 @@ public class BaseBody extends DockLayoutPanel {
 	private VerticalPanel searchPanel = new VerticalPanel();
 	private TextArea searchBox = null;
 	private double searchPanelHeight = 9;
-	private double sidePanelWidth = 15;
+	private double sidePanelWidth = 20;
 	public BaseBody(Unit unit) {
 		super(unit);
 		
@@ -46,7 +46,7 @@ public class BaseBody extends DockLayoutPanel {
 		createButton(textPanel,"20%");
 		howDidWeArrive(textPanel,"30%");
 		searchPanel.add(textPanel);
-		
+                searchPanel.setCellHeight(textPanel, "70%");		
 	}
 	
 	
@@ -70,6 +70,7 @@ public class BaseBody extends DockLayoutPanel {
 		SimplePanel panel = new SimplePanel();
 		panel.add(SearchConstants.getLabel(SearchConstants.strConstants.whatISURQuestion(), "question-font "));
 		searchPanel.add(panel);
+		searchPanel.setCellHeight(panel, "30%");
 	}
 	
 }
