@@ -144,6 +144,7 @@ h1 {
   border: none;
   height: 52px;
   width: 123px;
+  white-space: nowrap;
  }
  
  .button-font{
@@ -174,6 +175,13 @@ h1 {
   text-shadow: 0px 1px 1px #666;
 }
 
+.message-font{
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #2E2E2E;
+  text-align: left;
+  text-shadow: 0px 1px 1px #666;
+}
 
 .result-panel{
 	padding : 20px;
@@ -181,9 +189,17 @@ h1 {
 	margin-top : 10px;
 	//border:  1px solid red;
 	width : 96%;
-	height: 100%;
+    height: 97%;
 	//background-color: gray;
 	}
+.gwt-Image{
+	width: 96%;
+	height:97%;
+	margin-left :25px;
+	margin-top : 10px;
+	}
+	
+
 	
 .result-panel-background{
 	background-image: url(images/result-background.gif);
@@ -199,7 +215,33 @@ h1 {
 .gwt-TabPanel{
 	width:100%;
 	height: 95%;
-	}
+}
+
+
+.gwt-TabBar .gwt-TabBarItem {
+    background-image: url(images/non-active.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    padding-top: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
+ }
+
+ .gwt-TabBar .gwt-TabBarItem-selected {
+    background-image: url(images/active.gif) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    padding-top: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
+ }
+ 
 .side-panel{
     border: 1px solid black;	
 	

@@ -18,9 +18,9 @@ public class BaseBody extends DockLayoutPanel {
 	private TextArea searchBox = null;
 	private double searchPanelHeight = 9;
 	private double sidePanelWidth = 20;
+	
 	public BaseBody(Unit unit) {
 		super(unit);
-		
 		searchPanel.setStyleName("search-panel");
 		searchPanel.setVerticalAlignment(HasVerticalAlignment.ALIGN_MIDDLE);
 		searchPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LOCALE_START);
@@ -29,7 +29,9 @@ public class BaseBody extends DockLayoutPanel {
 		createSearchBox();
 		addNorth(searchPanel, searchPanelHeight);
 		addEast(new SidePanel(), sidePanelWidth);
-		add(new ResultPanel());
+		ResultPanel resultPanel = new ResultPanel();
+		add(resultPanel);
+		resultPanel.updateBackgroundImage();
 	}
 	
 	
