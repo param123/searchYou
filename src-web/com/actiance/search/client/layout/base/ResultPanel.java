@@ -23,6 +23,7 @@ public class ResultPanel extends VerticalPanel {
        people.add(new HTML("List of people<br>asasd <br>asdasd<br>"),"People");
        people.add(new HTML("List of people<br>asasd <br>Kumadasdasd<br>"),"Document");
        people.selectTab(0);
+//       people.getTabBar().setStyleName("gwt-tabBar");
 //       people.getTabBar().getTab(0).
        setCellHeight(messagePanel, "12%");
        setCellHeight(people, "88%");

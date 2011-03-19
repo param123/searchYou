@@ -24,7 +24,7 @@ public class DBReader implements IReader {
 	}
 
 	@Override
-	public void init() {
+	public void init() throws SQLException {
 		rdb.initConnection(DBFactory.getConfiguration());
 		statement = rdb.getStatement("Select * from Messages");
 	}
